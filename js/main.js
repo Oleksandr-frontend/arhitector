@@ -20,4 +20,13 @@ $(document).ready(function () {
             scrollTop: 0
         }, 800)
     })
+
+    // scroll animate
+    $("a[href^='#']").click(function(e){
+        e.preventDefault();
+        let element = $(this).attr("href")
+        $("body,html").animate({
+            scrollTop: $(element).offset().top
+        }, 2000)
+    })
 });
